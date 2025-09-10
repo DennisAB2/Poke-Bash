@@ -38,6 +38,7 @@ print('Weight: {}'.format(weight_formatted) + "(kgs)")
 print('Height: {}'.format(height_formatted) + "(m)")
 print('Ability: {}'.format(ability['name']))
 
+# Our code starts here
 # print(f"The number of pokemon is {len(pokemon_list)}")
 
 # Function to get pokemon stats for battle
@@ -62,6 +63,15 @@ def random_pokemon():
     response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{rand_id}/")
     data = response.json()
     return get_pokemon_stats(data["name"])
+
+
+# Get the player's Pokemon stats
+player = get_pokemon_stats(choice)
+# Get a random CPU Pokemon
+cpu = random_pokemon()
+print("\n Your Pokemon:", player)
+print("CPU's Pokemon:", cpu)
+
 
 
 # This is the loop that creates the battle between the player & CPU
@@ -96,3 +106,5 @@ def battle(p1, p2):
 
 # Runs the battle between player and CPU
 battle(player, cpu)
+
+
