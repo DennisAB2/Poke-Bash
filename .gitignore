@@ -1,0 +1,24 @@
+# Python cache / compiled files
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Virtual environments
+.env
+.venv/
+env/
+venv/
+
+# IDE settings
+.idea/
+.vscode/
+*.swp
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
