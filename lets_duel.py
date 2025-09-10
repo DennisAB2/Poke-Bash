@@ -1,5 +1,6 @@
 import requests
 import json
+import random
 
 # Get the list of pokemon from the API
 url = 'https://pokeapi.co/api/v2/pokemon/'
@@ -36,3 +37,20 @@ print('Name: {}'.format(pokemon_data['name']))
 print('Weight: {}'.format(weight_formatted) + "(kgs)")
 print('Height: {}'.format(height_formatted) + "(m)")
 print('Ability: {}'.format(ability['name']))
+
+# Function to get pokemon stats for battle
+def get_pokemon_stats(name):
+    url = f"https://pokeapi.co/api/v2/pokemon/{name}/"
+    response = requests.get(url)
+    if response.status_code != 200:
+        return None
+    data = response.json()
+    # extract essential battle stats
+    pokemon = {
+        "name": data["name"],
+        "hp": data["stats"][0]["base_stat"],       # HP
+        "attack": data["stats"][1]["base_stat"],   # Attack
+        "defense": data["stats"][2]["base_stat"]   # Defense
+    }
+    return pokemon
+
