@@ -19,6 +19,7 @@ Enter your pokemon:
 ```
 Type the name of a Pokémon from the list
 OR press Enter without typing anything to get a random Pokémon
+
 The CPU is automatically assigned a random Pokémon.
 
 The battle begins!
