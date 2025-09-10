@@ -45,7 +45,7 @@ Possible Error: If you enter a name that is not on the list, the program will cr
 4. Used git pull and push commands to work collaboratively on different branches
 5. Came together to merge branches and resolve conflicts
 6. Finished the battle loop together in Python
-7. Final push to the remote repository too present working code
+7. Final push to the remote repository to present working code
 8. Discussed future plans to implement code to account for instances where the user enters a name not present on the list to make the code more robust
 
 
