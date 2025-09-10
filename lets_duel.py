@@ -69,7 +69,7 @@ def random_pokemon():
 player = get_pokemon_stats(choice)
 # Get a random CPU Pokemon
 cpu = random_pokemon()
-print("\n Your Pokemon:", player)
+print("Your Pokemon:", player)
 print("CPU's Pokemon:", cpu)
 
 
