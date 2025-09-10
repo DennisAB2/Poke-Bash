@@ -38,6 +38,7 @@ print('Weight: {}'.format(weight_formatted) + "(kgs)")
 print('Height: {}'.format(height_formatted) + "(m)")
 print('Ability: {}'.format(ability['name']))
 
+
 # Function to get pokemon stats for battle
 def get_pokemon_stats(name):
     url = f"https://pokeapi.co/api/v2/pokemon/{name}/"
@@ -53,4 +54,11 @@ def get_pokemon_stats(name):
         "defense": data["stats"][2]["base_stat"]   # Defense
     }
     return pokemon
+
+# Function to get a random Pokemon for CPU
+def random_pokemon():
+    rand_id = random.randint(1, 151)  # First gen only, simpler
+    response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{rand_id}/")
+    data = response.json()
+    return get_pokemon_stats(data["name"])
 
